@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--P.O Tree View-->
+    <record id="purchase_order_normal_tree_view" model="ir.ui.view">
+        <field name="name">purchase.order.normal.tree.view</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_kpis_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+
+                   <field string="Account Name" name="account_name"/>
+                   <field string="Account Number" name="account_number"/>
+
+           </xpath>
+       </field>
+   </record>
+</odoo>
