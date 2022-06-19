@@ -14,4 +14,20 @@
            </xpath>
        </field>
    </record>
+
+
+    <!--P.O Form View-->
+    <record id="purchase_order_normal_form_view" model="ir.ui.view">
+        <field name="name">purchase.order.normal.form.view</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="before">
+                    <group>
+                   <field string="Account Name" name="account_name"/>
+                   <field string="Account Number" name="account_number"/>
+</group>
+           </xpath>
+       </field>
+   </record>
 </odoo>
