@@ -22,7 +22,7 @@
         <field name="model">purchase.order</field>
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='user_id']" position="before">
+            <xpath expr="//field[@name='purchase_id']" position="before">
 
                    <field string="Account Name" name="account_name"/>
 
